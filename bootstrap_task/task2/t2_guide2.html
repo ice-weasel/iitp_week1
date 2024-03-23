@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styling/global.css">
+
+</head>
+
+<body>
+
+
+  <div class="headings">
+    <div class="d-flex flex-row align-items-center gap-2">
+    <img src="../assets/logo_2.png" class="imagesize" style="margin-left: 10px; margin-top: 10px;"> 
+    </div>
+    <div class="popdowns">
+      <p class="headings-text">Notifications</p>
+      <p class="headings-text">Home</p>
+      <p class="headings-text">PhD Scholar</p>
+      <p class="headings-text">Logout</p>
+  </div>
+</div>
+
+
+  <div class="center-box">
+    <div class="box">
+      <div class="dropdown">
+        <label for="department" class="dropdown-boxes">Department</label>
+        <div class="dropdown-boxes">
+          <select id="external" class="form-select" id="department">
+            <option disabled selected value=""></option>
+            <option id="dept-1">Biological Sciences and Engineering</option>
+            <option id="dept-2">Chemistry</option>
+            <option id="dept-3">Civil Engineering</option>
+            <option id="dept-4">Computer Science & Engineering</option>
+            <option id="dept-5">Data Science</option>
+            <option id="dept-6">Electrical Engineering</option>
+          </select>
+        </div>
+
+        <div class=" my-4">
+          <label for="guide" class="dropdown-boxes">Guide 2</label>
+          <div class="dropdown-boxes">
+            <select id="external" class="form-select" id="guide">
+              <option disabled selected value=""></option>
+              <option class="dept-1">Prof. Jagadeesh Bayry</option>
+              <option class="dept-1">Dr. Abdul Rasheed P</option>
+              <option class="dept-2">Debarati Chatterjee</option>
+              <option class="dept-2">Dinesh Jagadeesan</option>
+              <option class="dept-3">Ankesh Kumar</option>
+              <option class="dept-3">Arun C O</option>
+              <option class="dept-4">Albert Sunny</option>
+              <option class="dept-4">Sandeep Chandran</option>
+              <option class="dept-5">Koninika Pal</option>
+              <option class="dept-5">Mrinal Kanti Das</option>
+              <option class="dept-6">Anirudh Guha</option>
+              <option class="dept-6">Arun Rahul S</option>
+            </select>
+          </div>
+        </div>
+        <input disabled id="text" size="35px" class="form-control" type="text" placeholder="Enter affiliation" />
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" class="form-check-input" onclick="window.location.href=`./external/t2_ext2.html`"/>
+        <label>External</label>
+      </div>
+      </div>
+      <div class="buttons-box">
+        <button class="buttons">
+          <a href="./t2_guide1.html" class="buttons-text">Back</a>
+        </button>
+        <button class="buttons">
+          <a href="./t2_guide3.html" class="buttons-text">Next</a>
+        </button>
+      </div>
+  </div>
+
+
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+
+<div class="center-box">
+  <div class="box">
+    <div class="dropdown">
+      <label for="department" class="dropdown-boxes">Department</label>
+      <div class="dropdown-boxes">
+        <select id="department" class="form-select" [(ngModel)]="selectedDepartment" (ngModelChange)="updateFilteredGuides()">
+          <option value="">Select a department</option>
+          <option id="dept-1">Biological Sciences and Engineering</option>
+          <option id="dept-2">Chemistry</option>
+          <option id="dept-3">Civil Engineering</option>
+          <option id="dept-4">Computer Science & Engineering</option>
+          <option id="dept-5">Data Science</option>
+          <option id="dept-6">Electrical Engineering</option>
+        </select>
+      </div>
+
+      <div class="my-4">
+        <label for="guide" class="dropdown-boxes">Guide {{ number }}</label>
+        <div class="dropdown-boxes">
+          <select id="guide" class="form-select" [(ngModel)]="selectedGuide" (ngModelChange)="onGuideSelect(selectedGuide)">
+            <option value="">Select a guide</option>
+            <option *ngFor="let guide of filteredGuides" [ngValue]="guide">{{ guide.name }}</option>
+          </select>
+        </div>
+      </div>
+      <div>Affiliation</div>
+      <input disabled id="text" size="35px" class="form-control" type="text" [value]="affil" />
+    </div>
+
+    <div class="checkbox">
+      <input id="externalCheckbox" class="border" type="checkbox" (change)="updateFilteredGuides(); updateAffiliation();hasExternalReset()" [(ngModel)]="externalCheckboxChecked" placeholder="{{affil}}">
+      <label for="externalCheckbox">External</label>
+    </div>
+  </div>
+
+  <div class="buttons-box">
+    <button class="buttons" (click)="decrement()" *ngIf="number==2||number==3">
+      <a class="buttons-text">Back</a>
+    </button>
+
+    <button class="buttons" (click)="increment()" *ngIf="number==1||number==2">
+      <a class="buttons-text">Next</a>
+    </button>
+    <button class="buttons" *ngIf="number==3">
+      <a class="buttons-text">Submit</a>
+    </button>
+  </div>
+</div>
